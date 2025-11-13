@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "index.html"   # Trigger only when index.html changes
+      - "index.html"
 
 permissions:
   contents: read
@@ -30,7 +30,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # Upload the whole project (index.html, etc.)
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
